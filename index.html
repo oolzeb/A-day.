@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>A day.</title>
+	<style type="text/css">
+
+		
+		#container{display: flex;}
+		body{margin: 0; text-align: center;}
+		#left{width: 100vw; height :53vh;
+			background: url(hour.jpg);
+		    background-size: 100vw 70vh auto;
+		    animation: shift 50s infinite linear;}
+		#control{margin: auto; margin-top: 40px;}
+		#title {font-size: 30px; padding: 50px;font-family: Chakra Petch}
+		#title2 {font-size: 20px; padding: 60px;font-family: Chakra Petch}
+		@keyframes shift{ 
+		from {background-position: 0 0;} 
+	    to {background-position: -1000vw; 0}}
+	</style>
+</head>
+<body>
+	<div id="title">A day.</div>
+	<div id="container">
+	     <div id = "left"></div>
+         </div>
+
+	<input type="range" id="control" step="0.1" min="10" max="50" value="30">
+	<script type="text/javascript">
+		control.oninput = function (){
+			left.style.animationDuration = control.value + "s ";
+			right.style.animationDuration = control.value + "s ";
+		}
+	</script>
+
+	<div id="title2">you can decide how fast time passes.</div>
+   
+</body>
+</html>
